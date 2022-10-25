@@ -1,0 +1,14 @@
+{
+  "@plentymarkets/generator-plugin": {
+    "answers": {
+      "author": "André Matthies",
+      "description": "",
+      "name": "Seven",
+      "type": "template",
+      "version": "0.0.1"
+    },
+    "promptValues": {
+      "type": "integration"
+    }
+  }
+}

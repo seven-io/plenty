@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "menu": {
+    "global": {
+      "formFields": {
+        "global.container.apiKey": {
+          "label": "Config.apiKeyLabel",
+          "options": {
+            "isPassword": true
+          },
+          "required": true,
+          "type": "inputText"
+        }
+      },
+      "fullWidth": true,
+      "label": "Config.general"
+    }
+  }
+}

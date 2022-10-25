@@ -1,0 +1,54 @@
+{
+  "author": "seven communications GmbH & Co. KG",
+  "authorIcon": "icon_author_xs.png",
+  "categories": [],
+  "containers": [
+    {
+      "description": "Example Container to render content.",
+      "key": "Example.Container",
+      "name": "Example container"
+    }
+  ],
+  "dataProviders": [
+    {
+      "description": "Displays example Content.",
+      "key": "Seven\\Containers\\SevenDataProvider",
+      "name": "SevenDataProvider"
+    }
+  ],
+  "dependencies": {
+    "seven.io/api": "v3.0.0"
+  },
+  "description": "The official seven plugin",
+  "email": "support@seven.io",
+  "isClosedSource": false,
+  "javaScriptFiles": [],
+  "keywords": [
+    "mms",
+    "seven",
+    "sms",
+    "text"
+  ],
+  "license": "Copyright by seven communications GmbH & Co. KG",
+  "marketplaceName": {
+    "de": "Seven SMS",
+    "en": "Seven Text Messaging"
+  },
+  "name": "Seven",
+  "namespace": "Seven",
+  "phone": "+49 431 3014927 – 0",
+  "platform": {
+    "php": ">=8.0 <9"
+  },
+  "pluginIcon": "icon_plugin_xs.png",
+  "price": 0.00,
+  "require": {},
+  "runOnBuild": [],
+  "serviceProvider": "Seven\\Providers\\SevenServiceProvider",
+  "shortDescription": {
+    "de": "Offizielles Plugin von Seven für den Versand von SMS.",
+    "en": "Official plugin from seven for text messaging."
+  },
+  "type": "integration",
+  "version": "0.0.1"
+}
