@@ -1,11 +1,11 @@
 {
   "defaultEntryPoint": "index.html",
-  "namespace": "MyPlugin",
+  "namespace": "Seven",
   "menuEntries": [
     {
       "label": "Seven",
-      "menu": "settings/orders/myplugin",
-      "urlKey": "basic-settings",
+      "menu": "start",
+      "urlKey": "seven-settings",
       "entryPoint": "index.html?action=basic-settings"
     }
   ]

@@ -1,12 +1,13 @@
 {
   "formatVersion": 1,
   "menu": {
-    "global": {
+    "general": {
       "formFields": {
-        "global.container.apiKey": {
+        "general.apiKey": {
           "label": "Config.apiKeyLabel",
           "options": {
-            "isPassword": true
+            "isPassword": true,
+            "tooltip": "Config.apiKeyInfo"
           },
           "required": true,
           "type": "inputText"
@@ -14,6 +15,19 @@
       },
       "fullWidth": true,
       "label": "Config.general"
+    },
+    "events": {
+      "formFields": {
+        "events.postCreateOrderText": {
+          "label": "Config.postCreateOrderText",
+          "options": {
+            "tooltip": "Config.postCreateOrderTextInfo"
+          },
+          "type": "inputTextArea"
+        }
+      },
+      "fullWidth": true,
+      "label": "Config.eventDrivenDispatch"
     }
   }
 }

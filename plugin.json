@@ -49,6 +49,6 @@
     "de": "Offizielles Plugin von Seven für den Versand von SMS.",
     "en": "Official plugin from seven for text messaging."
   },
-  "type": "integration",
+  "type": "backend",
   "version": "0.0.1"
 }
