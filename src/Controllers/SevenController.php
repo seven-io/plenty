@@ -10,10 +10,6 @@ class SevenController extends Controller
 {
     use Loggable;
 
-    /**
-     * @param Twig $twig
-     * @return string
-     */
     public function getHelloWorldPage(Twig $twig):string
     {
         $this->getLogger('seven')->debug('getHelloWorldPage');

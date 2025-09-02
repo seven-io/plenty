@@ -4,14 +4,9 @@ namespace Seven\EventProcedures;
 
 use Plenty\Modules\EventProcedures\Events\EventProceduresTriggered;
 
-class Filters
-{
-    /**
-     * @param EventProceduresTriggered $event
-     * @return boolean
-     */
-    public function orderLocked(EventProceduresTriggered $event)
-    {
+class Filters {
+    /** @noinspection PhpUnused */
+    public function orderLocked(EventProceduresTriggered $event): bool {
         return $event->getOrder()->lockStatus != 'unlocked';
     }
 }
