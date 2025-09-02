@@ -2,20 +2,8 @@
   "author": "seven communications GmbH & Co. KG",
   "authorIcon": "icon_author_xs.png",
   "categories": [],
-  "containers": [
-    {
-      "description": "Example Container to render content.",
-      "key": "Example.Container",
-      "name": "Example container"
-    }
-  ],
-  "dataProviders": [
-    {
-      "description": "Displays example Content.",
-      "key": "Seven\\Containers\\SevenDataProvider",
-      "name": "SevenDataProvider"
-    }
-  ],
+  "containers": [],
+  "dataProviders": [],
   "dependencies": {
     "seven.io/api": "v3.0.0"
   },

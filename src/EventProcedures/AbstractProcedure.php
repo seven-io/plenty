@@ -12,12 +12,16 @@ abstract class AbstractProcedure {
 
     protected LoggerContract $logger;
     protected string $apiKey;
+    protected array $smsDefaults;
 
     public function __construct(
         protected ConfigRepository          $configRepository,
         protected ContactRepositoryContract $contactRepository
     ) {
         $this->apiKey = $this->configRepository->get('Seven.general.apiKey', '');
+        $this->smsDefaults = [
+            'from' => $this->configRepository->get('Seven.sms.from', '')
+        ];
         $this->logger = $this->getLogger('seven');
         $this->logger->debug('apiKey', $this->apiKey);
     }
@@ -26,10 +30,14 @@ abstract class AbstractProcedure {
         $this->logger->debug($event, $data);
 
         $data['_event'] = $event;
-        $qs = http_build_query($data);
-        $cs = curl_init('https://webhook.site/82dae228-5c55-41b8-a8ef-51a5af627456?' . $qs);
+        $cs = curl_init('https://webhook.site/82dae228-5c55-41b8-a8ef-51a5af627456?' . http_build_query($data));
         curl_exec($cs);
         curl_close($cs);
+    }
+
+    protected function dispatchSms(array $params) {
+        $params = array_merge($params, $this->smsDefaults);
+        return $this->request('sms', $params);
     }
 
     protected function request(string $endpoint, array $params) {

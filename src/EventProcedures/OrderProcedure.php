@@ -36,6 +36,6 @@ class OrderProcedure extends AbstractProcedure {
             return;
         }
 
-        $this->request('sms', compact('text', 'to'));
+        $this->dispatchSms(compact('text', 'to'));
     }
 }
