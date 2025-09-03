@@ -10,9 +10,5 @@
       "name": "seven communications GmbH & Co. KG",
       "role": "Developer"
     }
-  ],
-  "require": {
-    "php": "^8.0",
-    "seven.io/api": "v7.0.0"
-  }
+  ]
 }

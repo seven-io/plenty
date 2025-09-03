@@ -16,6 +16,16 @@
       "fullWidth": true,
       "label": "Config.general"
     },
+    "sms": {
+      "formFields": {
+        "sms.from": {
+          "label": "Config.smsFromLabel",
+          "type": "inputText"
+        }
+      },
+      "fullWidth": true,
+      "label": "Config.sms"
+    },
     "events": {
       "formFields": {
         "events.postCreateOrderText": {
