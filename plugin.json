@@ -4,15 +4,12 @@
   "categories": [],
   "containers": [],
   "dataProviders": [],
-  "dependencies": {
-    "seven.io/api": "v3.0.0"
-  },
+  "dependencies": {},
   "description": "The official seven plugin",
   "email": "support@seven.io",
   "isClosedSource": false,
   "javaScriptFiles": [],
   "keywords": [
-    "mms",
     "seven",
     "sms",
     "text"
