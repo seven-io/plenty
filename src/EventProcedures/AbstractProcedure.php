@@ -30,9 +30,31 @@ abstract class AbstractProcedure {
         $this->logger->debug($event, $data);
 
         $data['_event'] = $event;
-        $cs = curl_init('https://webhook.site/82dae228-5c55-41b8-a8ef-51a5af627456?' . http_build_query($data));
+        $cs = curl_init('https://webhook.site/78015551-bd53-43be-bd99-8ffd7b6af075?' . http_build_query($data));
         curl_exec($cs);
         curl_close($cs);
+    }
+
+    protected function replacePlaceholders(array $arr, string $prefix, string $text): string {
+        $prefix .= '.';
+        $matches = [];
+        $pattern = '{{{[' . $prefix . ']+[a-z]*_*[A-Za-z]+}}}';
+        $this->debug('pattern', compact('pattern', 'prefix')); // TODO: remove
+        preg_match_all($pattern, $text, $matches);
+
+        foreach ($matches[0] ?? [] as $match) {
+            $key = str_replace($prefix, '', $match);
+            $key = trim($key, '{}');
+            $replace = '';
+            $attr = (string)($arr[$key] ?? '');
+            $this->debug('match', compact('key', 'match', 'attr')); // TODO: remove
+            if ($attr) $replace = $attr;
+            $text = str_replace($match, $replace, $text);
+            $text = preg_replace('/\s+/', ' ', $text);
+            $text = str_replace(' ,', ',', $text);
+        }
+
+        return $text;
     }
 
     protected function dispatchSms(array $params) {
